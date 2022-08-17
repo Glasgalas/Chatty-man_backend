@@ -6,7 +6,7 @@ dotenv.config();
 const { SECRET_KEY } = process.env;
 
 const getUser = async (req, res) => {
-  const { email } = req.body;
+  const { email } = req.params;
   const user = await User.findOne({ email });
   const { _id, name } = user;
   const payload = {
