@@ -3,7 +3,7 @@ const { Message } = require("../../models");
 const getAll = async (req, res) => {
   const { _id } = req.user;
 
-  const result = await Transaction.find({
+  const result = await Message.find({
     owner: _id,
   });
 

@@ -3,7 +3,6 @@ const axios = require("axios");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 const { User } = require("../../models");
-// const { Transaction } = require("../../models/transaction");
 
 dotenv.config();
 
