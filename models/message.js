@@ -3,6 +3,10 @@ const Joi = require("joi");
 
 const messageSchema = Schema(
   {
+    contactId: {
+      type: String,
+      require: true,
+    },
     isFrom: {
       type: Boolean,
       require: true,
@@ -11,7 +15,11 @@ const messageSchema = Schema(
       type: String,
       require: true,
     },
-    date: {
+    dateLong: {
+      type: String,
+      require: true,
+    },
+    dateShort: {
       type: String,
       require: true,
     },
