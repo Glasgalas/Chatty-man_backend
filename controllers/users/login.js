@@ -55,7 +55,7 @@ exports.googleRedirect = async (req, res) => {
       Authorization: `Bearer ${tokenData.data.access_token}`,
     },
   });
-
+  console.log(userData);
   const name = userData.data.given_name;
   const email = userData.data.email;
   let user = null;
@@ -64,6 +64,7 @@ exports.googleRedirect = async (req, res) => {
     user = await User.create({
       email,
       name,
+      userData,
     });
   }
   res.redirect(`${FRONTEND_URL}/google-user?email=${email}`);
