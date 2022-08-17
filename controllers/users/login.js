@@ -58,13 +58,14 @@ exports.googleRedirect = async (req, res) => {
   console.log(userData);
   const name = userData.data.given_name;
   const email = userData.data.email;
+  const avatar = userData.data.picture;
   let user = null;
   user = await User.findOne({ email });
   if (!user) {
     user = await User.create({
       email,
       name,
-      userData,
+      avatar,
     });
   }
   res.redirect(`${FRONTEND_URL}/google-user?email=${email}`);

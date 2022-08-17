@@ -12,6 +12,9 @@ const userSchema = Schema(
       unique: true,
       requiered: [true, "Email is required"],
     },
+    avatar: {
+      type: String,
+    },
     token: {
       type: String,
       default: null,
