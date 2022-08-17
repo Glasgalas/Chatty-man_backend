@@ -8,7 +8,7 @@ const { SECRET_KEY } = process.env;
 const getUser = async (req, res) => {
   const { email } = req.params;
   const user = await User.findOne({ email });
-  const { _id, name } = user;
+  const { _id, name, avatar } = user;
   const payload = {
     id: user._id,
   };
