@@ -24,7 +24,7 @@ const getUser = async (req, res) => {
     message: `Welcome, ${name}!`,
     data: {
       token,
-      user: { name, email },
+      user: { name, email, avatar },
       messages,
     },
   });
